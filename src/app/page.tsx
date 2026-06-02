@@ -1,16 +1,19 @@
+import dynamic from "next/dynamic";
 import LoadingScreen from "@/components/LoadingScreen";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import Services from "@/components/Services";
-import WhyChooseUs from "@/components/WhyChooseUs";
-import Gallery from "@/components/Gallery";
-import Testimonials from "@/components/Testimonials";
-import SocialFeed from "@/components/SocialFeed";
-import CTA from "@/components/CTA";
-import Contact from "@/components/Contact";
-import FloatingWidgets from "@/components/FloatingWidgets";
-import Footer from "@/components/Footer";
+
+// Dynamically import below-the-fold components to reduce initial JS bundle size and Total Blocking Time (TBT)
+const Services = dynamic(() => import("@/components/Services"), { ssr: true });
+const WhyChooseUs = dynamic(() => import("@/components/WhyChooseUs"), { ssr: true });
+const Gallery = dynamic(() => import("@/components/Gallery"), { ssr: true });
+const Testimonials = dynamic(() => import("@/components/Testimonials"), { ssr: true });
+const SocialFeed = dynamic(() => import("@/components/SocialFeed"), { ssr: true });
+const CTA = dynamic(() => import("@/components/CTA"), { ssr: true });
+const Contact = dynamic(() => import("@/components/Contact"), { ssr: true });
+const FloatingWidgets = dynamic(() => import("@/components/FloatingWidgets"), { ssr: true });
+const Footer = dynamic(() => import("@/components/Footer"), { ssr: true });
 
 export default function Home() {
   return (

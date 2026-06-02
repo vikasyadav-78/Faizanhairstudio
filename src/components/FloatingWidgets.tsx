@@ -38,6 +38,7 @@ export default function FloatingWidgets() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.5, duration: 0.8 }}
         href="tel:8171885432"
+        aria-label="Call Faizan Hair Studio directly at +91 8171885432"
         className="fixed bottom-6 left-6 z-30 px-5 sm:px-6 py-3 sm:py-3.5 bg-primary border border-secondary hover:border-accent hover:shadow-gold-glow text-secondary hover:text-white font-poppins font-bold text-[10px] sm:text-xs uppercase tracking-wider rounded-full flex items-center space-x-2.5 shadow-premium transition-all duration-300"
       >
         <Phone size={14} className="stroke-[2.5] animate-pulse" />
@@ -52,6 +53,7 @@ export default function FloatingWidgets() {
         href="https://wa.me/918171885432?text=Hi%20Faizan%20Hair%20Studio,%20I'd%20like%20to%20book%20an%20appointment."
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Chat with Faizan Hair Studio on WhatsApp"
         className="fixed bottom-6 right-6 z-30 px-5 sm:px-6 py-3 sm:py-3.5 bg-[#25D366] hover:bg-[#20ba59] text-white hover:scale-105 font-poppins font-bold text-[10px] sm:text-xs uppercase tracking-wider rounded-full flex items-center space-x-2.5 shadow-gold-glow-hover transition-all duration-300"
       >
         <IoLogoWhatsapp className="w-4 h-4 fill-white" />
