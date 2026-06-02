@@ -67,7 +67,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "HairSalon",
     "name": "Faizan Hair Studio",
-    "image": "/images/hero-bg.jpg",
+    "image": "/images/hero-bg.png",
     "url": "https://faizanhairstudio.com",
     "telephone": "+918171885432",
     "priceRange": "₹₹",
