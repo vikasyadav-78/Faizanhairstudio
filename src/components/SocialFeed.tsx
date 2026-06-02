@@ -43,7 +43,7 @@ export default function SocialFeed() {
             <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6 text-center sm:text-left">
               <div className="relative w-20 h-20 rounded-full border-2 border-secondary p-0.5 overflow-hidden flex-shrink-0 shadow-lg bg-black">
                 <Image
-                  src="/images/logo.jpg"
+                  src="/images/logo.webp"
                   alt="Faizan Hair Studio Instagram Profile"
                   fill
                   className="object-cover rounded-full"
@@ -128,7 +128,7 @@ export default function SocialFeed() {
           >
             <div className="relative w-full h-[450px] overflow-hidden bg-black">
               <Image
-                src="/images/reel-thumbnail.png"
+                src="/images/reel-thumbnail.webp"
                 alt="Faizan Hair Studio Instagram Reel Cover"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -181,7 +181,7 @@ export default function SocialFeed() {
           >
             <div className="relative w-full h-[450px] overflow-hidden bg-[#151515]">
               <Image
-                src="/images/cert-1.png"
+                src="/images/cert-1.webp"
                 alt="MD Faizan Hair Specialist Certificate Post"
                 fill
                 quality={100}
@@ -239,7 +239,7 @@ export default function SocialFeed() {
           >
             <div className="relative w-full h-[450px] overflow-hidden bg-[#151515]">
               <Image
-                src="/images/cert-2.png"
+                src="/images/cert-2.webp"
                 alt="Faizan Academy Achievement Certificate Post"
                 fill
                 quality={100}

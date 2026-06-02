@@ -80,7 +80,7 @@ export default function Header() {
           >
             <div className="relative w-10 h-10 rounded-full border border-secondary/30 overflow-hidden bg-primary/80 flex-shrink-0">
               <Image
-                src="/images/logo.jpg"
+                src="/images/logo.webp"
                 alt="Faizan Hair Studio Logo"
                 fill
                 className="object-cover"
@@ -195,7 +195,7 @@ export default function Header() {
                   >
                     <div className="relative w-10 h-10 rounded-full border border-secondary/30 overflow-hidden bg-primary/80 flex-shrink-0">
                       <Image
-                        src="/images/logo.jpg"
+                        src="/images/logo.webp"
                         alt="Faizan Hair Studio Logo"
                         fill
                         className="object-cover"

@@ -8,49 +8,49 @@ import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 const galleryImages = [
   {
     id: 0,
-    src: "/images/precision-haircut.png",
+    src: "/images/precision-haircut.webp",
     title: "Precision Haircut",
     subtitle: "Artistic Scissor Design",
     aspect: "aspect-[3/4]"
   },
   {
     id: 1,
-    src: "/images/razor-lineup.png",
+    src: "/images/razor-lineup.webp",
     title: "Razor Detail Lineup",
     subtitle: "Bespoke Beard Artistry",
     aspect: "aspect-[4/5]"
   },
   {
     id: 2,
-    src: "/images/hair-coloring.png",
+    src: "/images/hair-coloring.webp",
     title: "Premium Hair Coloring",
     subtitle: "Luxury Color & Highlights",
     aspect: "aspect-[3/4]"
   },
   {
     id: 3,
-    src: "/images/hot-towel-shave.png",
+    src: "/images/hot-towel-shave.webp",
     title: "Classic Hot Towel Shave",
     subtitle: "Traditional Razor Styling",
     aspect: "aspect-[4/3]"
   },
   {
     id: 4,
-    src: "/images/hair-smoothening.png",
+    src: "/images/hair-smoothening.webp",
     title: "Silk Smoothening Therapy",
     subtitle: "Keratin & Steam Treatment",
     aspect: "aspect-[3/4]"
   },
   {
     id: 5,
-    src: "/images/luxury-lounge.png",
+    src: "/images/luxury-lounge.webp",
     title: "Signature Grooming Experience",
     subtitle: "Executive Styling Lounge",
     aspect: "aspect-[16/10]"
   },
   {
     id: 6,
-    src: "/images/facial-skincare.png",
+    src: "/images/facial-skincare.webp",
     title: "Bespoke Facial Skincare",
     subtitle: "Nourishing Cleanup Treatment",
     aspect: "aspect-[3/4]"

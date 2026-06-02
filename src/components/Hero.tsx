@@ -92,7 +92,7 @@ export default function Hero() {
         className="absolute inset-0 scale-110 origin-bottom"
       >
         <Image
-          src="/images/hero-bg.png"
+          src="/images/hero-bg.webp"
           alt="Faizan Hair Studio Premium Salon Interior"
           fill
           priority

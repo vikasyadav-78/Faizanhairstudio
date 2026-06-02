@@ -48,7 +48,7 @@ export default function StudioInfo() {
               <div className="flex items-center space-x-4 mb-8 pb-6 border-b border-white/10">
                 <div className="relative w-12 h-12 rounded-full border border-secondary/30 overflow-hidden bg-black flex-shrink-0">
                   <Image
-                    src="/images/logo.jpg"
+                    src="/images/logo.webp"
                     alt="Faizan Hair Studio Logo"
                     fill
                     className="object-cover"
