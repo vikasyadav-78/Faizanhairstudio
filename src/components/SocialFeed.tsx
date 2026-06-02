@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Image from "next/image";
 import { Heart, MessageCircle, ExternalLink, Play } from "lucide-react";
 
@@ -30,13 +27,7 @@ export default function SocialFeed() {
         </div>
 
         {/* Instagram Profile Card Widget */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="max-w-2xl mx-auto bg-richCharcoal/40 border border-secondary/20 p-6 md:p-8 mb-16 shadow-gold-glow rounded-xl backdrop-blur-md"
-        >
+        <div className="max-w-2xl mx-auto bg-richCharcoal/40 border border-secondary/20 p-6 md:p-8 mb-16 shadow-gold-glow rounded-xl backdrop-blur-md">
           {/* Main profile row */}
           <div className="flex flex-col sm:flex-row items-center sm:items-start justify-between gap-6 pb-6 border-b border-white/10">
             {/* Avatar & Username */}
@@ -110,21 +101,17 @@ export default function SocialFeed() {
               </a>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* 3-Column Posts Feed */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
           
           {/* Post 1: Live Instagram Reel Custom Video Poster Card */}
-          <motion.a
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <a
             href="https://www.instagram.com/p/DYzlj4Vz641/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col h-full bg-richCharcoal/20 border border-white/5 shadow-premium overflow-hidden group"
+            className="flex flex-col h-full bg-richCharcoal/20 border border-white/5 shadow-premium overflow-hidden group hover:scale-[1.01] transition-transform duration-500 rounded-xl"
           >
             <div className="relative w-full h-[450px] overflow-hidden bg-black">
               <Image
@@ -166,18 +153,14 @@ export default function SocialFeed() {
                 Watch our latest hair transformation and classic razor styling live on set.
               </p>
             </div>
-          </motion.a>
+          </a>
 
           {/* Post 2: MD Faizan Hair Specialist Certificate Card */}
-          <motion.a
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.15 }}
+          <a
             href="https://www.instagram.com/p/CsIYkGZpNza/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col h-full bg-richCharcoal/20 border border-white/5 shadow-premium overflow-hidden group"
+            className="flex flex-col h-full bg-richCharcoal/20 border border-white/5 shadow-premium overflow-hidden group hover:scale-[1.01] transition-transform duration-500 rounded-xl"
           >
             <div className="relative w-full h-[450px] overflow-hidden bg-[#151515]">
               <Image
@@ -224,18 +207,14 @@ export default function SocialFeed() {
                 Certified in Dialectic Grooming and structural hair artistry, validating advanced hair architecture and salon styling.
               </p>
             </div>
-          </motion.a>
+          </a>
 
           {/* Post 3: Faizan Academy Achievement Certificate Card */}
-          <motion.a
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+          <a
             href="https://www.instagram.com/p/CrGuOOQpa8m/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col h-full bg-richCharcoal/20 border border-white/5 shadow-premium overflow-hidden group"
+            className="flex flex-col h-full bg-richCharcoal/20 border border-white/5 shadow-premium overflow-hidden group hover:scale-[1.01] transition-transform duration-500 rounded-xl"
           >
             <div className="relative w-full h-[450px] overflow-hidden bg-[#151515]">
               <Image
@@ -282,7 +261,7 @@ export default function SocialFeed() {
                 Awarded by premier styling institutions, confirming certified styling credentials and structural salon layering.
               </p>
             </div>
-          </motion.a>
+          </a>
 
         </div>
 

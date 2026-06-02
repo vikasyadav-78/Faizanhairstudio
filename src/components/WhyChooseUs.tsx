@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { Award, Sparkles, ShieldCheck, Heart, User, Tag } from "lucide-react";
 
 const features = [
@@ -67,14 +64,10 @@ export default function WhyChooseUs() {
 
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => {
+          {features.map((feature) => {
             const Icon = feature.icon;
             return (
-              <motion.div
-                initial={{ opacity: 0, y: 35 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
+              <div
                 key={feature.id}
                 className="group bg-white p-8 border border-secondary/10 hover:border-secondary transition-all duration-500 hover:shadow-premium relative overflow-hidden"
               >
@@ -98,7 +91,7 @@ export default function WhyChooseUs() {
 
                 {/* Micro hover shadow block */}
                 <div className="absolute inset-0 bg-secondary/[0.01] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-              </motion.div>
+              </div>
             );
           })}
         </div>
