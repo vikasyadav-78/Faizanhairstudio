@@ -8,49 +8,49 @@ import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 const galleryImages = [
   {
     id: 0,
-    src: "/images/944f6115-69b0-41c7-acbb-6c921666c388.jfif",
+    src: "/images/precision-haircut.jfif",
     title: "Precision Haircut",
     subtitle: "Artistic Scissor Design",
     aspect: "aspect-[3/4]"
   },
   {
     id: 1,
-    src: "/images/a90d9878-2188-4d7e-9ce5-cf342c6b29fd.jfif",
+    src: "/images/razor-lineup.jfif",
     title: "Razor Detail Lineup",
     subtitle: "Bespoke Beard Artistry",
     aspect: "aspect-[4/5]"
   },
   {
     id: 2,
-    src: "/images/43b4de6c-c4b4-43c4-b7f7-b7adb80c7254.jfif",
+    src: "/images/hair-coloring.jfif",
     title: "Premium Hair Coloring",
     subtitle: "Luxury Color & Highlights",
     aspect: "aspect-[3/4]"
   },
   {
     id: 3,
-    src: "/images/59e49978-39ad-41d3-9022-d156e7d5d0fd.jfif",
+    src: "/images/hot-towel-shave.jfif",
     title: "Classic Hot Towel Shave",
     subtitle: "Traditional Razor Styling",
     aspect: "aspect-[4/3]"
   },
   {
     id: 4,
-    src: "/images/6afc7a0f-0472-46e0-8836-c3e53be94210.jfif",
+    src: "/images/hair-smoothening.jfif",
     title: "Silk Smoothening Therapy",
     subtitle: "Keratin & Steam Treatment",
     aspect: "aspect-[3/4]"
   },
   {
     id: 5,
-    src: "/images/87ac41c2-b5d4-45b3-a521-0a275ec08bb1.jfif",
+    src: "/images/luxury-lounge.jfif",
     title: "Signature Grooming Experience",
     subtitle: "Executive Styling Lounge",
     aspect: "aspect-[16/10]"
   },
   {
     id: 6,
-    src: "/images/dc642322-c15e-4b2a-b1e5-a606e82e5ca1.jfif",
+    src: "/images/facial-skincare.jfif",
     title: "Bespoke Facial Skincare",
     subtitle: "Nourishing Cleanup Treatment",
     aspect: "aspect-[3/4]"

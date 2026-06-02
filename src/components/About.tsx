@@ -75,7 +75,7 @@ export default function About() {
             {/* Main Image */}
             <div className="relative w-full h-full overflow-hidden shadow-premium border border-secondary/15 z-10">
               <Image
-                src="/images/87ac41c2-b5d4-45b3-a521-0a275ec08bb1.jfif"
+                src="/images/luxury-lounge.jfif"
                 alt="Faizan Hair Studio Luxury Grooming Experience"
                 fill
                 className="object-cover transition-transform duration-700 hover:scale-105"
