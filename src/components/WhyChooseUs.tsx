@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { Award, Sparkles, ShieldCheck, Heart, User, Tag } from "lucide-react";
 
 const features = [
@@ -39,6 +42,29 @@ const features = [
   }
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.08
+    }
+  }
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 15
+    }
+  }
+};
+
 export default function WhyChooseUs() {
   return (
     <section id="why-us" className="py-24 bg-bgIvory overflow-hidden relative">
@@ -50,26 +76,52 @@ export default function WhyChooseUs() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <span className="font-poppins text-xs font-semibold text-secondary uppercase tracking-[0.25em] mb-3 inline-block">
+          <motion.span
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="font-poppins text-xs font-semibold text-secondary uppercase tracking-[0.25em] mb-3 inline-block"
+          >
             Why Choose Us
-          </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-playfair text-primary mb-6">
+          </motion.span>
+          <motion.h2
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-3xl sm:text-4xl md:text-5xl font-bold font-playfair text-primary mb-6"
+          >
             The Faizan Distinction
-          </h2>
+          </motion.h2>
           <div className="w-20 h-[1px] bg-secondary mx-auto mb-6" />
-          <p className="font-inter text-sm sm:text-base text-richCharcoal/70 leading-relaxed font-light">
+          <motion.p
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="font-inter text-sm sm:text-base text-richCharcoal/70 leading-relaxed font-light"
+          >
             We offer more than just a haircut. We provide a luxurious salon journey designed entirely around your comfort, styling goals, and absolute safety.
-          </p>
+          </motion.p>
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
           {features.map((feature) => {
             const Icon = feature.icon;
             return (
-              <div
+              <motion.div
+                variants={cardVariants}
+                whileHover={{ y: -6, scale: 1.01 }}
                 key={feature.id}
-                className="group bg-white p-8 border border-secondary/10 hover:border-secondary transition-all duration-500 hover:shadow-premium relative overflow-hidden"
+                className="group bg-white p-8 border border-secondary/10 hover:border-secondary transition-all duration-500 hover:shadow-premium relative overflow-hidden cursor-pointer"
               >
                 {/* Accent Top Border Hover Reveal */}
                 <div className="absolute top-0 left-0 right-0 h-[3px] bg-gold-metallic scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" />
@@ -91,10 +143,10 @@ export default function WhyChooseUs() {
 
                 {/* Micro hover shadow block */}
                 <div className="absolute inset-0 bg-secondary/[0.01] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-              </div>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
 
       </div>
     </section>
