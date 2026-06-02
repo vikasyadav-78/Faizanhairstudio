@@ -120,7 +120,16 @@ export default function Gallery() {
               transition={{ duration: 0.6 }}
               key={image.id}
               onClick={() => setActiveImageId(image.id)}
-              className={`relative break-inside-avoid w-full ${image.aspect} overflow-hidden group border border-white/5 cursor-pointer shadow-premium mb-6`}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  setActiveImageId(image.id);
+                }
+              }}
+              role="button"
+              tabIndex={0}
+              aria-label={`View ${image.title} - ${image.subtitle} in Lightbox`}
+              className={`relative break-inside-avoid w-full ${image.aspect} overflow-hidden group border border-white/5 cursor-pointer shadow-premium mb-6 focus:outline-none focus:ring-2 focus:ring-secondary/50 rounded-xl`}
             >
               {/* Photo */}
               <Image

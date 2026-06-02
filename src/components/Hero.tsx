@@ -3,6 +3,7 @@
 import { useRef, useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Phone } from "lucide-react";
+import Image from "next/image";
 
 const headlines = [
   "Premium Hair Styling & Grooming Experience",
@@ -87,12 +88,19 @@ export default function Hero() {
     >
       {/* Background Image with Parallax */}
       <motion.div
-        style={{
-          y: backgroundY,
-          backgroundImage: "url('/images/hero-bg.png')",
-        }}
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-110 origin-bottom"
-      />
+        style={{ y: backgroundY }}
+        className="absolute inset-0 scale-110 origin-bottom"
+      >
+        <Image
+          src="/images/hero-bg.png"
+          alt="Faizan Hair Studio Premium Salon Interior"
+          fill
+          priority
+          quality={85}
+          sizes="100vw"
+          className="object-cover"
+        />
+      </motion.div>
 
       {/* Luxury Dark radial and gradient overlays */}
       <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/45 to-primary/80" />
