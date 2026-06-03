@@ -88,6 +88,29 @@ const categories = [
   { id: "packages", name: "Packages" }
 ];
 
+const servicesContainerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.08
+    }
+  }
+};
+
+const serviceCardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring" as const,
+      stiffness: 100,
+      damping: 15
+    }
+  }
+};
+
 export default function Services() {
   const [activeCategory, setActiveCategory] = useState("all");
 
@@ -154,6 +177,10 @@ export default function Services() {
 
         {/* Services Grid with AnimatePresence */}
         <motion.div
+          variants={servicesContainerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
           layout
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
@@ -163,12 +190,11 @@ export default function Services() {
               return (
                 <motion.div
                   layout
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  variants={serviceCardVariants}
+                  whileHover={{ y: -6, scale: 1.01 }}
                   exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ duration: 0.5 }}
                   key={service.id}
-                  className="group bg-richCharcoal/30 border border-white/5 hover:border-secondary/30 p-8 flex flex-col justify-between transition-all duration-500 hover:shadow-gold-glow relative overflow-hidden h-[260px]"
+                  className="group bg-richCharcoal/30 border border-white/5 hover:border-secondary/30 p-8 flex flex-col justify-between transition-all duration-500 hover:shadow-gold-glow relative overflow-hidden h-[260px] cursor-pointer"
                 >
                   {/* Decorative Background Hover Glow */}
                   <div className="absolute top-0 right-0 w-24 h-24 bg-secondary/5 group-hover:bg-secondary/10 rounded-full blur-2xl transition-all duration-500" />

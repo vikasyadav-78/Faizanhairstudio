@@ -95,7 +95,7 @@ export default function BookingForm() {
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="John Doe"
-                        className="bg-bgIvory/50 border border-secondary/20 px-4 h-12 text-sm font-inter text-primary focus:border-secondary focus:ring-1 focus:ring-secondary/30 focus:outline-none transition-colors duration-300 rounded-lg"
+                        className="w-full bg-bgIvory/50 border border-secondary/20 px-4 h-12 text-sm font-inter text-primary focus:border-secondary focus:ring-1 focus:ring-secondary/30 focus:outline-none transition-colors duration-300 rounded-lg"
                       />
                     </div>
 
@@ -113,7 +113,7 @@ export default function BookingForm() {
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="8171885432"
-                        className="bg-bgIvory/50 border border-secondary/20 px-4 h-12 text-sm font-inter text-primary focus:border-secondary focus:ring-1 focus:ring-secondary/30 focus:outline-none transition-colors duration-300 rounded-lg"
+                        className="w-full bg-bgIvory/50 border border-secondary/20 px-4 h-12 text-sm font-inter text-primary focus:border-secondary focus:ring-1 focus:ring-secondary/30 focus:outline-none transition-colors duration-300 rounded-lg"
                       />
                     </div>
                   </div>
@@ -129,7 +129,7 @@ export default function BookingForm() {
                         id="service"
                         value={formData.service}
                         onChange={handleChange}
-                        className="bg-bgIvory/50 border border-secondary/20 px-4 text-xs font-inter text-primary focus:border-secondary focus:outline-none transition-colors duration-300 h-12 rounded-lg"
+                        className="w-full bg-bgIvory/50 border border-secondary/20 px-4 text-xs font-inter text-primary focus:border-secondary focus:outline-none transition-colors duration-300 h-12 rounded-lg"
                       >
                         {servicesList.map((service, idx) => (
                           <option key={idx} value={service}>
@@ -151,7 +151,7 @@ export default function BookingForm() {
                         required
                         value={formData.date}
                         onChange={handleChange}
-                        className="bg-bgIvory/50 border border-secondary/20 px-4 text-sm font-inter text-primary focus:border-secondary focus:outline-none transition-colors duration-300 h-12 rounded-lg"
+                        className="w-full bg-bgIvory/50 border border-secondary/20 px-4 text-sm font-inter text-primary focus:border-secondary focus:outline-none transition-colors duration-300 h-12 rounded-lg"
                       />
                     </div>
 
@@ -167,7 +167,7 @@ export default function BookingForm() {
                         required
                         value={formData.time}
                         onChange={handleChange}
-                        className="bg-bgIvory/50 border border-secondary/20 px-4 text-sm font-inter text-primary focus:border-secondary focus:outline-none transition-colors duration-300 h-12 rounded-lg"
+                        className="w-full bg-bgIvory/50 border border-secondary/20 px-4 text-sm font-inter text-primary focus:border-secondary focus:outline-none transition-colors duration-300 h-12 rounded-lg"
                       />
                     </div>
                   </div>
@@ -184,7 +184,7 @@ export default function BookingForm() {
                       value={formData.message}
                       onChange={handleChange}
                       placeholder="Tell us about your style goals..."
-                      className="bg-bgIvory/50 border border-secondary/20 p-4 text-sm font-inter text-primary focus:border-secondary focus:ring-1 focus:ring-secondary/30 focus:outline-none transition-colors duration-300 resize-none rounded-lg"
+                      className="w-full bg-bgIvory/50 border border-secondary/20 p-4 text-sm font-inter text-primary focus:border-secondary focus:ring-1 focus:ring-secondary/30 focus:outline-none transition-colors duration-300 resize-none rounded-lg"
                     />
                   </div>
 
