@@ -21,21 +21,34 @@ export default function Header() {
   const [activeSection, setActiveSection] = useState("#home");
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+    const elementsCache: Record<string, HTMLElement | null> = {};
+    let ticking = false;
 
-      // Section intersection detection for active state styling
-      const scrollPosition = window.scrollY + 120;
-      for (const link of navLinks) {
-        const section = document.querySelector(link.href) as HTMLElement;
-        if (section) {
-          const sectionTop = section.offsetTop;
-          const sectionHeight = section.offsetHeight;
-          if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-            setActiveSection(link.href);
-            break;
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrolled(window.scrollY > 50);
+
+          // Section intersection detection for active state styling
+          const scrollPosition = window.scrollY + 120;
+          for (const link of navLinks) {
+            if (!elementsCache[link.href]) {
+              const el = document.querySelector(link.href) as HTMLElement | null;
+              if (el) elementsCache[link.href] = el;
+            }
+            const section = elementsCache[link.href];
+            if (section) {
+              const sectionTop = section.offsetTop;
+              const sectionHeight = section.offsetHeight;
+              if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                setActiveSection(link.href);
+                break;
+              }
+            }
           }
-        }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 

@@ -58,7 +58,7 @@ const cardVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      type: "spring",
+      type: "spring" as const,
       stiffness: 100,
       damping: 15
     }
@@ -81,7 +81,7 @@ export default function WhyChooseUs() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="font-poppins text-xs font-semibold text-secondary uppercase tracking-[0.25em] mb-3 inline-block"
+            className="font-poppins text-xs font-semibold text-secondary-dark uppercase tracking-[0.25em] mb-3 inline-block"
           >
             Why Choose Us
           </motion.span>
@@ -127,12 +127,12 @@ export default function WhyChooseUs() {
                 <div className="absolute top-0 left-0 right-0 h-[3px] bg-gold-metallic scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" />
                 
                 {/* Feature Icon */}
-                <div className="w-14 h-14 rounded-full bg-bgIvory flex items-center justify-center text-secondary mb-6 group-hover:bg-secondary group-hover:text-primary transition-all duration-500 border border-secondary/15">
+                <div className="w-14 h-14 rounded-full bg-bgIvory flex items-center justify-center text-secondary-dark mb-6 group-hover:bg-secondary group-hover:text-primary transition-all duration-500 border border-secondary/15">
                   <Icon size={24} className="stroke-[1.5]" />
                 </div>
 
                 {/* Title */}
-                <h3 className="font-playfair text-xl font-bold text-primary mb-4 group-hover:text-secondary transition-colors duration-300">
+                <h3 className="font-playfair text-xl font-bold text-primary mb-4 group-hover:text-secondary-dark transition-colors duration-300">
                   {feature.title}
                 </h3>
 

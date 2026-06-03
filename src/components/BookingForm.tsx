@@ -52,7 +52,7 @@ export default function BookingForm() {
         
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="font-poppins text-xs font-semibold text-secondary uppercase tracking-[0.25em] mb-3 inline-block">
+          <span className="font-poppins text-xs font-semibold text-secondary-dark uppercase tracking-[0.25em] mb-3 inline-block">
             Online Reservations
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-playfair text-primary mb-6">
@@ -84,7 +84,7 @@ export default function BookingForm() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     {/* Name Input */}
                     <div className="flex flex-col">
-                      <label htmlFor="name" className="font-poppins text-[10px] uppercase tracking-widest text-richCharcoal/70 mb-2 font-semibold">
+                      <label htmlFor="name" className="font-poppins text-xs uppercase tracking-widest text-richCharcoal/70 mb-2 font-semibold">
                         Your Name *
                       </label>
                       <input
@@ -101,7 +101,7 @@ export default function BookingForm() {
 
                     {/* Phone Input */}
                     <div className="flex flex-col">
-                      <label htmlFor="phone" className="font-poppins text-[10px] uppercase tracking-widest text-richCharcoal/70 mb-2 font-semibold">
+                      <label htmlFor="phone" className="font-poppins text-xs uppercase tracking-widest text-richCharcoal/70 mb-2 font-semibold">
                         Phone Number *
                       </label>
                       <input
@@ -121,7 +121,7 @@ export default function BookingForm() {
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                     {/* Service Select */}
                     <div className="flex flex-col sm:col-span-1">
-                      <label htmlFor="service" className="font-poppins text-[10px] uppercase tracking-widest text-richCharcoal/70 mb-2 font-semibold">
+                      <label htmlFor="service" className="font-poppins text-xs uppercase tracking-widest text-richCharcoal/70 mb-2 font-semibold">
                         Select Service
                       </label>
                       <select
@@ -141,7 +141,7 @@ export default function BookingForm() {
 
                     {/* Date Input */}
                     <div className="flex flex-col">
-                      <label htmlFor="date" className="font-poppins text-[10px] uppercase tracking-widest text-richCharcoal/70 mb-2 font-semibold">
+                      <label htmlFor="date" className="font-poppins text-xs uppercase tracking-widest text-richCharcoal/70 mb-2 font-semibold">
                         Preferred Date *
                       </label>
                       <input
@@ -157,7 +157,7 @@ export default function BookingForm() {
 
                     {/* Time Input */}
                     <div className="flex flex-col">
-                      <label htmlFor="time" className="font-poppins text-[10px] uppercase tracking-widest text-richCharcoal/70 mb-2 font-semibold">
+                      <label htmlFor="time" className="font-poppins text-xs uppercase tracking-widest text-richCharcoal/70 mb-2 font-semibold">
                         Preferred Time *
                       </label>
                       <input
@@ -174,7 +174,7 @@ export default function BookingForm() {
 
                   {/* Message Input */}
                   <div className="flex flex-col">
-                    <label htmlFor="message" className="font-poppins text-[10px] uppercase tracking-widest text-richCharcoal/70 mb-2 font-semibold">
+                    <label htmlFor="message" className="font-poppins text-xs uppercase tracking-widest text-richCharcoal/70 mb-2 font-semibold">
                       Special Instructions (Optional)
                     </label>
                     <textarea
@@ -210,7 +210,7 @@ export default function BookingForm() {
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                  className="w-16 h-16 rounded-full bg-secondary/15 flex items-center justify-center text-secondary border border-secondary/30 mb-6"
+                  className="w-16 h-16 rounded-full bg-secondary/15 flex items-center justify-center text-secondary-dark border border-secondary/30 mb-6"
                 >
                   <CheckCircle2 size={36} className="stroke-[1.5]" />
                 </motion.div>
@@ -219,7 +219,7 @@ export default function BookingForm() {
                   Booking Request Received!
                 </h3>
                 <p className="font-inter text-sm text-richCharcoal/80 max-w-md mb-8 leading-relaxed font-light">
-                  Thank you, <strong className="font-semibold text-primary">{formData.name}</strong>. Our reservations coordinator will contact you shortly on <strong className="font-semibold text-primary">{formData.phone}</strong> to confirm your slot for <strong className="font-semibold text-secondary">{formData.service}</strong>.
+                  Thank you, <strong className="font-semibold text-primary">{formData.name}</strong>. Our reservations coordinator will contact you shortly on <strong className="font-semibold text-primary">{formData.phone}</strong> to confirm your slot for <strong className="font-semibold text-secondary-dark">{formData.service}</strong>.
                 </p>
 
                 <button
@@ -234,7 +234,7 @@ export default function BookingForm() {
                       message: ""
                     });
                   }}
-                  className="px-6 py-3 border border-secondary hover:bg-secondary hover:text-primary transition-all duration-300 font-poppins text-[10px] uppercase tracking-widest font-bold text-secondary rounded-lg"
+                  className="px-6 py-3 border border-secondary-dark hover:bg-secondary-dark hover:text-primary transition-all duration-300 font-poppins text-[10px] uppercase tracking-widest font-bold text-secondary-dark rounded-lg"
                 >
                   Book Another Session
                 </button>

@@ -84,7 +84,7 @@ export default function Testimonials() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="font-poppins text-xs font-semibold text-secondary uppercase tracking-[0.25em] mb-3 inline-block">
+          <span className="font-poppins text-xs font-semibold text-secondary-dark uppercase tracking-[0.25em] mb-3 inline-block">
             Client Stories
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-playfair text-primary mb-6">
@@ -113,13 +113,13 @@ export default function Testimonials() {
             4.8 Rating
           </p>
           <div className="flex items-center space-x-2">
-            <span className="font-poppins text-[10px] uppercase tracking-widest text-richCharcoal/60">
+            <span className="font-poppins text-xs uppercase tracking-widest text-richCharcoal/60">
               Based on 14+ Google Reviews
             </span>
             <div className="w-3.5 h-3.5 rounded-full bg-green-600 flex items-center justify-center text-white scale-90">
               <Check size={8} className="stroke-[4]" />
             </div>
-            <span className="font-poppins text-[9px] uppercase tracking-wider text-green-700 font-semibold">
+            <span className="font-poppins text-xs uppercase tracking-wider text-green-700 font-semibold">
               Verified
             </span>
           </div>
@@ -149,7 +149,7 @@ export default function Testimonials() {
                   {/* Stars */}
                   <div className="flex space-x-1">
                     {[...Array(testimonials[activeIndex].rating)].map((_, i) => (
-                      <Star key={i} size={16} className="fill-secondary stroke-secondary" />
+                      <Star key={i} size={16} className="fill-secondary-dark stroke-secondary-dark" />
                     ))}
                   </div>
                 </div>
@@ -184,7 +184,7 @@ export default function Testimonials() {
         <div className="flex items-center justify-center space-x-6 mt-10">
           <button
             onClick={handlePrev}
-            className="w-10 h-10 border border-secondary/20 hover:border-secondary hover:text-secondary rounded-full flex items-center justify-center text-primary transition-all focus:outline-none"
+            className="w-10 h-10 border border-secondary-dark/20 hover:border-secondary-dark hover:text-secondary-dark rounded-full flex items-center justify-center text-primary transition-all focus:outline-none"
             aria-label="Previous Review"
           >
             <ChevronLeft size={18} />
@@ -200,7 +200,7 @@ export default function Testimonials() {
                   setActiveIndex(i);
                 }}
                 className={`h-1.5 rounded-full transition-all duration-300 ${
-                  activeIndex === i ? "w-6 bg-secondary" : "w-1.5 bg-secondary/30"
+                  activeIndex === i ? "w-6 bg-secondary-dark" : "w-1.5 bg-secondary-dark/30"
                 }`}
                 aria-label={`Go to slide ${i + 1}`}
               />
@@ -209,7 +209,7 @@ export default function Testimonials() {
 
           <button
             onClick={handleNext}
-            className="w-10 h-10 border border-secondary/20 hover:border-secondary hover:text-secondary rounded-full flex items-center justify-center text-primary transition-all focus:outline-none"
+            className="w-10 h-10 border border-secondary-dark/20 hover:border-secondary-dark hover:text-secondary-dark rounded-full flex items-center justify-center text-primary transition-all focus:outline-none"
             aria-label="Next Review"
           >
             <ChevronRight size={18} />

@@ -9,7 +9,7 @@ export default function LoadingScreen() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2500);
+    }, 500);
     return () => clearTimeout(timer);
   }, []);
 
@@ -45,10 +45,10 @@ export default function LoadingScreen() {
             </motion.h1>
 
             <motion.div
-              initial={{ width: 0, opacity: 0 }}
-              animate={{ width: 120, opacity: 1 }}
+              initial={{ scaleX: 0, opacity: 0 }}
+              animate={{ scaleX: 1, opacity: 1 }}
               transition={{ delay: 0.5, duration: 1, ease: "easeInOut" }}
-              className="h-[1px] bg-secondary mt-4"
+              className="w-[120px] h-[1px] bg-secondary mt-4 origin-center"
             />
 
             <motion.p

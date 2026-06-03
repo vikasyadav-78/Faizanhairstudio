@@ -11,6 +11,8 @@ function Counter({ value, suffix = "", duration = 2 }: { value: number; suffix?:
   const elementRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
+    let activeInterval: NodeJS.Timeout | undefined;
+
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting && !countRef.current) {
@@ -22,10 +24,10 @@ function Counter({ value, suffix = "", duration = 2 }: { value: number; suffix?:
           const totalSteps = totalMiliseconds / stepTime;
           const increment = end / totalSteps;
 
-          const timer = setInterval(() => {
+          activeInterval = setInterval(() => {
             start += increment;
             if (start >= end) {
-              clearInterval(timer);
+              if (activeInterval) clearInterval(activeInterval);
               setCount(end);
             } else {
               setCount(Math.floor(start));
@@ -37,7 +39,11 @@ function Counter({ value, suffix = "", duration = 2 }: { value: number; suffix?:
     );
 
     if (elementRef.current) observer.observe(elementRef.current);
-    return () => observer.disconnect();
+    
+    return () => {
+      observer.disconnect();
+      if (activeInterval) clearInterval(activeInterval);
+    };
   }, [value, duration]);
 
   return (
@@ -80,7 +86,6 @@ export default function About() {
                 fill
                 className="object-cover transition-transform duration-700 hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 50vw"
-                priority
               />
               {/* Image dark overlay */}
               <div className="absolute inset-0 bg-primary/10 hover:bg-transparent transition-colors duration-500" />
@@ -113,7 +118,7 @@ export default function About() {
             className="flex flex-col text-left"
           >
             {/* Small Header */}
-            <span className="font-poppins text-xs font-semibold text-secondary uppercase tracking-[0.25em] mb-3">
+            <span className="font-poppins text-xs font-semibold text-secondary-dark uppercase tracking-[0.25em] mb-3">
               About The Studio
             </span>
 
@@ -142,7 +147,7 @@ export default function About() {
                 "High Customer Satisfaction",
               ].map((item, idx) => (
                 <div key={idx} className="flex items-center space-x-3">
-                  <div className="flex-shrink-0 w-5 h-5 rounded-full bg-secondary/15 flex items-center justify-center text-secondary">
+                  <div className="flex-shrink-0 w-5 h-5 rounded-full bg-secondary/15 flex items-center justify-center text-secondary-dark">
                     <Check size={12} className="stroke-[3]" />
                   </div>
                   <span className="font-poppins text-xs text-primary font-medium tracking-wide uppercase">{item}</span>
@@ -153,7 +158,7 @@ export default function About() {
             {/* Animated Counters Block */}
             <div className="grid grid-cols-3 gap-6 pt-8 border-t border-secondary/20">
               <div className="flex flex-col">
-                <span className="font-playfair text-3xl sm:text-4xl font-bold text-secondary">
+                <span className="font-playfair text-3xl sm:text-4xl font-bold text-secondary-dark">
                   <Counter value={10} suffix="+" />
                 </span>
                 <span className="font-poppins text-[10px] uppercase tracking-wider text-richCharcoal/60 mt-1">
@@ -162,7 +167,7 @@ export default function About() {
               </div>
               
               <div className="flex flex-col">
-                <span className="font-playfair text-3xl sm:text-4xl font-bold text-secondary">
+                <span className="font-playfair text-3xl sm:text-4xl font-bold text-secondary-dark">
                   <Counter value={5} suffix="+" />
                 </span>
                 <span className="font-poppins text-[10px] uppercase tracking-wider text-richCharcoal/60 mt-1">
@@ -171,7 +176,7 @@ export default function About() {
               </div>
 
               <div className="flex flex-col">
-                <span className="font-playfair text-3xl sm:text-4xl font-bold text-secondary">
+                <span className="font-playfair text-3xl sm:text-4xl font-bold text-secondary-dark">
                   <Counter value={14} suffix="+" />
                 </span>
                 <span className="font-poppins text-[10px] uppercase tracking-wider text-richCharcoal/60 mt-1">
